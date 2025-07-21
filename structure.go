@@ -240,7 +240,7 @@ type Key struct {
 
 // Map structure represents specifies how to obtain the Media
 // Initialization Section required to parse the applicable
-// Media Segments.
+// Media SegmentChan.
 //
 // It applied to every Media Segment that appears after it in the
 // Playlist until the next EXT-X-MAP tag or until the end of the

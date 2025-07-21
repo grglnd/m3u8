@@ -858,7 +858,7 @@ func TestDecodeMediaPlaylistWithCustomTags(t *testing.T) {
 		}
 
 		if expectedIndex != len(testCase.expectedSegmentTags) {
-			t.Errorf("Did not parse custom tags on all expected segments. Parsed Segments: %d Expected: %d", expectedIndex, len(testCase.expectedSegmentTags))
+			t.Errorf("Did not parse custom tags on all expected segments. Parsed SegmentChan: %d Expected: %d", expectedIndex, len(testCase.expectedSegmentTags))
 		}
 	}
 }
@@ -971,7 +971,7 @@ func TestDecodeMediaPlaylistWithProgramDateTime(t *testing.T) {
 		"20181231/0555e0c371ea801726b92512c331399d_00000002.ts",
 		"20181231/0555e0c371ea801726b92512c331399d_00000003.ts"}
 	if pp.Count() != uint(len(segNames)) {
-		t.Errorf("Segments in playlist %d != %d", pp.Count(), len(segNames))
+		t.Errorf("SegmentChan in playlist %d != %d", pp.Count(), len(segNames))
 	}
 
 	for idx, name := range segNames {
